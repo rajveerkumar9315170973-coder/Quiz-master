@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Master</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a href="#" class="logo" id="logo">Quiz Master</a>
+    <nav>
+      <button class="nav-btn" id="navHome">Home</button>
+      <button class="nav-btn" id="navAbout">About</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Welcome page -->
+    <section id="welcome" class="card page active">
+      <h1>Quiz Master</h1>
+      <p class="lead">Welcome! Test your knowledge of web basics with 8 quick questions. Enter your name to begin.</p>
+      <label for="playerName">Your name</label>
+      <input type="text" id="playerName" placeholder="e.g. Aisha" maxlength="30">
+      <p class="error" id="nameError"></p>
+      <button class="btn" id="startBtn">Start quiz</button>
+    </section>
+
+    <!-- Quiz page -->
+    <section id="quiz" class="card page">
+      <div class="quiz-top">
+        <span id="questionCount">Question 1 of 8</span>
+        <span id="liveScore">Score: 0</span>
+      </div>
+      <div class="progress"><div class="progress-bar" id="progressBar"></div></div>
+      <h2 id="questionText"></h2>
+      <div id="options" class="options"></div>
+      <p class="feedback" id="feedback"></p>
+      <button class="btn" id="nextBtn" disabled>Next question</button>
+    </section>
+
+    <!-- Result page -->
+    <section id="result" class="card page">
+      <h1 id="resultTitle">Well done!</h1>
+      <p class="big-score" id="resultScore"></p>
+      <p class="lead" id="resultMessage"></p>
+      <div class="result-buttons">
+        <button class="btn" id="restartBtn">Play again</button>
+        <button class="btn btn-outline" id="homeBtn">Back to home</button>
+      </div>
+    </section>
+
+    <!-- About page -->
+    <section id="about" class="card page">
+      <h1>About</h1>
+      <p class="lead">Quiz Master is a beginner project built with HTML, CSS and vanilla JavaScript. It has no frameworks, no backend and no database.</p>
+      <button class="btn btn-outline" id="aboutBack">Back</button>
+    </section>
+  </main>
+
+  <footer class="footer">Quiz Master &copy; 2026</footer>
+  <script src="script.js"></script>
+</body>
+</html>
